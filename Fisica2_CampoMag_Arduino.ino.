@@ -1,0 +1,15 @@
+int sensorValue = 0;
+float voltage = 0;
+float Campo = 0;
+
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  sensorValue = analogRead(0);
+  voltage = sensorValue;
+  Campo = voltage-540;
+  delay(100);
+  Serial.println(Campo);
+}
